@@ -2,7 +2,7 @@ $(document).ready(function () {
     console.log("Coded by Barlomiej Tuchowski"); //Signature
     $(".container__fly-in-text, .container__random-article, .container__or, .container__search-article, .container__input").removeClass("hidden"); //Fades in intro.
     function getData () {
-        var input = document.getElementsByClassName("container__input--text")[0].value; //Gets user input as a query.
+        var input = document.getElementsByClassName("container__input-text")[0].value; //Gets user input as a query.
         console.log("User has entred:", input);
         
         if (input == "") {
@@ -34,19 +34,19 @@ $(document).ready(function () {
                         newContent += '<h1>' + title + '</h1>'; //Adds article header.
                         newContent += '<p>' + extract + '</p>'; //Adds article extract.
                         newContent += '</div></a>' //Closing tags.
-                        document.getElementById('articles').innerHTML = newContent; //Loads new content to page.
-                        var modifier = 0; //Allow to execute  $('.container__input--text').change(getData).
+                        document.getElementById('container__articles').innerHTML = newContent; //Loads new content to page.
+                        var modifier = 0; //Allow to execute  $(".container__input-text").change(getData).
                     }
                 }
             })
         }
     }
-    var modifier = 0; //Allow to execute  $('.container__input--text').change(getData).
-    $(".container__button--submit").click(getData, function (){
+    var modifier = 0; //Allow to execute  $(".container__input-text").change(getData).
+    $(".container__button-submit").click(getData, function (){
         var modifier = 1; //This modifier prvents from double execute getData function when press a SEARCH button.
     });
     
     if (modifier == 0) {
-        $(".container__input--text").change(getData);
+        $(".container__input-text").change(getData);
     }
 });

@@ -107,7 +107,7 @@ body {
   .container__input.hidden {
     opacity: 0; }
 
-.container__input--text {
+.container__input-text {
   height: 4rem;
   width: 15rem;
   border-radius: 10rem;
@@ -117,10 +117,10 @@ body {
   color: #fff;
   outline: 0;
   font-size: 1.6rem; }
-  .container__input--text::placeholder {
+  .container__input-text::placeholder {
     color: #fff; }
 
-.container__button--submit {
+.container__button-submit {
   height: 4rem;
   width: 15rem;
   border-radius: 10rem;
@@ -132,13 +132,13 @@ body {
   font-size: 1.6rem;
   position: relative;
   transition: all .5s ease-out; }
-  .container__button--submit:hover {
+  .container__button-submit:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
-  .container__button--submit:active {
+  .container__button-submit:active {
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
-  .container__button--submit::after {
+  .container__button-submit::after {
     content: "";
     display: block;
     width: 100%;
@@ -149,7 +149,7 @@ body {
     top: 0;
     z-index: -1;
     transition: all .5s ease; }
-  .container__button--submit:hover::after {
+  .container__button-submit:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
