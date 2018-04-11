@@ -221,7 +221,7 @@ body {
 }
   
 //Calass added after press search button --> move content to top.
-.container__move--up {
+.container__move-up {
     top: 5%;
     @include transformBothDirection(-50%, 0%);
     transition: all 1s;
@@ -245,5 +245,16 @@ body {
     &:active {
         transform: translateY(-0.1rem);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+    }
+}
+
+#container__articles {
+    h1 {
+        margin-bottom: 1rem;
+        font-weight: 400;
+    }
+
+    p {
+        line-height: 140%;
     }
 }

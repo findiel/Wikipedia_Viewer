@@ -10,7 +10,7 @@ $(document).ready(function () {
         }
         
         else {
-            $(".container").addClass("container__move--up"); //Move content to top of the page. --> to make a space for vikiedia content.
+            $(".container").addClass("container__move-up"); //Move content to top of the page. --> to make a space for vikiedia content.
             var website = "https://en.wikipedia.org"; //Wikipedia main page.
             var query = "/w/api.php?action=query&format=json&origin=*&prop=extracts%7Cinfo&generator=search&exsentences=1&exintro=1&explaintext=1&exsectionformat=plain&inprop=url&gsrsearch=" + input + "&gsrlimit=10"; //A full query. Could be changed with the API sandbox: https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=jsonfm
             var fullApi = website + query; //Full JSON path.

@@ -153,7 +153,7 @@ body {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
-.container__move--up {
+.container__move-up {
   top: 5%;
   transform: translateX(-50%) translateY(0%);
   transition: all 1s; }
@@ -175,3 +175,10 @@ body {
   .container__new-article:active {
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+
+#container__articles h1 {
+  margin-bottom: 1rem;
+  font-weight: 400; }
+
+#container__articles p {
+  line-height: 140%; }
