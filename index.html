@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta http-equiv="author" content="Bartłomiej Tuchowski" />
-        <title>Weather App</title>
+        <title>Wikipedia Viewer</title>
 
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -13,5 +13,35 @@
         <script src="js/script.js"></script>
     </head>
     <body>
-        
+        <div class="container">
+            <ul class="container__fly-in-text hidden">
+                <li>W</li>
+                <li>I</li>
+                <li>K</li>
+                <li>I</li>
+                <li>P</li>
+                <li>E</li>
+                <li>D</li>
+                <li>I</li>
+                <li>A</li>
+                <li></li>
+                <li>V</li>
+                <li>I</li>
+                <li>E</li>
+                <li>W</li>
+                <li>E</li>
+                <li>R</li>
+            </ul>
+            <div class="container__random-article hidden">
+                <div class="container__random-article--scale"><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Click here for a random article</a></div>
+            </div>
+            <div class="container__or hidden">or</div>
+            <div class="container__search-article hidden">Search an article</div>
+            <div class="container__input hidden">
+                <input class="container__input--text" type="text" value="" placeholder="Give me sth . . ." />
+              <button class="container__button--submit">Search</button>
+            </div>
+            <div id="articles"></div>
+        </div>
     </body>
+</html>
