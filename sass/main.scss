@@ -10,7 +10,9 @@
 
 //MEDIA QUERY MANAGER
 /*
-0 - 600px:      Phone
+0 - 400px:      Very slim phone
+400 - 500px:    Slim phone     
+500 - 600px:    Phone
 600 - 900px:    Tablet portrait
 900 - 1200px:   Tablet landscape
 1200 - 1800px:  is where our normal styles apply
@@ -24,6 +26,10 @@ $breakpoint argument choices:
 - big-desktop
 */
 @mixin respond($breakpoint) {
+    //400px
+    @if $breakpoint == phone-very-slim {
+        @media (max-width: 25em) { @content };
+    };
     //500px
     @if $breakpoint == phone-slim {
         @media (max-width: 31.25em) { @content };
@@ -91,8 +97,16 @@ body {
         width: 50rem;
     }
 
+    @include respond(phone-very-slim) {
+        width: 40rem;
+    }
+
     &__fly-in-text {
         margin-bottom: 4.5rem;
+
+        @include respond(phone-slim) {
+            margin-bottom: 3rem;
+        }
         
         li {
             font-size: 7rem;
@@ -109,6 +123,11 @@ body {
         
             @include respond(phone-slim) {
                 font-size: 4rem;
+            }
+
+            @include respond(phone-very-slim) {
+                font-size: 3.7rem;
+                letter-spacing: 0;
             }
           
             &:nth-child(10) {
@@ -213,6 +232,11 @@ body {
         opacity: 1;
         transition: all 2s ease-out 6s;
         margin-bottom: 5rem;
+
+        @include respond(phone-slim) {
+            margin-bottom: 4rem;
+        }
+
         &.hidden {
             opacity: 0;
         }

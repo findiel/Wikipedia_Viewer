@@ -4,7 +4,9 @@
   font-family: "Lato", sans-serif; }
 
 /*
-0 - 600px:      Phone
+0 - 400px:      Very slim phone
+400 - 500px:    Slim phone     
+500 - 600px:    Phone
 600 - 900px:    Tablet portrait
 900 - 1200px:   Tablet landscape
 1200 - 1800px:  is where our normal styles apply
@@ -48,8 +50,14 @@ body {
   @media (max-width: 31.25em) {
     .container {
       width: 50rem; } }
+  @media (max-width: 25em) {
+    .container {
+      width: 40rem; } }
   .container__fly-in-text {
     margin-bottom: 4.5rem; }
+    @media (max-width: 31.25em) {
+      .container__fly-in-text {
+        margin-bottom: 3rem; } }
     .container__fly-in-text li {
       font-size: 7rem;
       color: #fff;
@@ -64,6 +72,10 @@ body {
       @media (max-width: 31.25em) {
         .container__fly-in-text li {
           font-size: 4rem; } }
+      @media (max-width: 25em) {
+        .container__fly-in-text li {
+          font-size: 3.7rem;
+          letter-spacing: 0; } }
       .container__fly-in-text li:nth-child(10) {
         margin: 0rem 1.5rem 0rem 1.5rem; }
     .container__fly-in-text.hidden li {
@@ -122,6 +134,9 @@ body {
     opacity: 1;
     transition: all 2s ease-out 6s;
     margin-bottom: 5rem; }
+    @media (max-width: 31.25em) {
+      .container__input {
+        margin-bottom: 4rem; } }
     .container__input.hidden {
       opacity: 0; }
   .container__input-text {
