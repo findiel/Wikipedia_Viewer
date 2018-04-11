@@ -3,20 +3,70 @@
     padding: 0;
     font-family: "Lato", sans-serif;
 }
-//Mixins & varibles.
+//Mixins below.
 @mixin transformBothDirection ($X, $Y) {
     transform: translateX($X) translateY($Y);
 }
-  
+
+//MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+1200 - 1800px:  is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint argument choices:
+- phone-slim
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+@mixin respond($breakpoint) {
+    //500px
+    @if $breakpoint == phone-slim {
+        @media (max-width: 31.25em) { @content };
+    };
+    //600px
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content };
+    };
+    //900px
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content };
+    };
+    //1200px
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content };
+    };
+    //1800px
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content };
+    };
+}
+
+//Colors varibles below.  
 $violetColor: #9933ff;
 $orangeColor: #ff6600;
 $whiteColor: #fff;
 $grayColor: #707070;
 $darkColor: #333333;
   
-//CSS below.
+//SCSS below.
 html {
     font-size: 62.5%;
+
+    //media query
+    @include respond(tab-land){
+        font-size: 56.25%;
+    }
+    @include respond(tab-port){
+        font-size: 50%;
+    }
+    @include respond(phone){
+        font-size: 37.5%;
+    }
 }
   
 body {
@@ -41,7 +91,7 @@ body {
         margin-bottom: 4.5rem;
         
         li {
-            font-size: 5.5vw;
+            font-size: 7rem;
             color: $whiteColor;
             list-style: none;
             display: inline-block;
