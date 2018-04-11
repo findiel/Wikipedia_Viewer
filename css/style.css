@@ -115,7 +115,8 @@ body {
     font-weight: bold;
     font-size: 1.6rem;
     position: relative;
-    transition: all .5s ease-out; }
+    transition: all .5s ease-out;
+    cursor: pointer; }
     .container__button-submit:hover {
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }

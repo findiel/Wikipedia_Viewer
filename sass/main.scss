@@ -183,6 +183,7 @@ body {
         font-size: 1.6rem;
         position: relative;
         transition: all .5s ease-out;
+        cursor: pointer;
         
         &:hover {
             transform: translateY(-0.3rem);
