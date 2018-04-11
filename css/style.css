@@ -25,9 +25,6 @@ html {
   @media (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 37.5em) {
-    html {
-      font-size: 43.75%; } }
 
 body {
   height: 100vh;
@@ -45,6 +42,12 @@ body {
   text-align: center;
   backface-visibility: hidden;
   width: 85rem; }
+  @media (max-width: 37.5em) {
+    .container {
+      width: 70rem; } }
+  @media (max-width: 31.25em) {
+    .container {
+      width: 50rem; } }
   .container__fly-in-text {
     margin-bottom: 4.5rem; }
     .container__fly-in-text li {
@@ -55,6 +58,12 @@ body {
       opacity: 1;
       transition: transform 2.5s ease;
       letter-spacing: 0.5rem; }
+      @media (max-width: 37.5em) {
+        .container__fly-in-text li {
+          font-size: 5rem; } }
+      @media (max-width: 31.25em) {
+        .container__fly-in-text li {
+          font-size: 4rem; } }
       .container__fly-in-text li:nth-child(10) {
         margin: 0rem 1.5rem 0rem 1.5rem; }
     .container__fly-in-text.hidden li {
@@ -125,6 +134,10 @@ body {
     color: #fff;
     outline: 0;
     font-size: 1.6rem; }
+    @media (max-width: 31.25em) {
+      .container__input-text {
+        width: 12rem;
+        height: 3.5rem; } }
     .container__input-text::placeholder {
       color: #fff; }
   .container__button-submit {
@@ -140,6 +153,10 @@ body {
     position: relative;
     transition: all .5s ease-out;
     cursor: pointer; }
+    @media (max-width: 31.25em) {
+      .container__button-submit {
+        width: 12rem;
+        height: 3.5rem; } }
     .container__button-submit:hover {
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
