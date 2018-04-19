@@ -38,7 +38,7 @@ $(document).ready(function () {
                         var modifier = 0; //Allow to execute  $(".container__input-text").change(getData).
                     }
                 }
-            })
+            });
         }
     }
     var modifier = 0; //Allow to execute  $(".container__input-text").change(getData).
