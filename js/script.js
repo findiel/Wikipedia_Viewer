@@ -1,19 +1,19 @@
 $(document).ready(function () {
-    console.log("Coded by Barlomiej Tuchowski"); //Signature
-    $(".container__fly-in-text, .container__random-article, .container__or, .container__search-article, .container__input").removeClass("hidden"); //Fades in intro.
+    console.log("Coded by Bartlomiej Tuchowski");
+    $(".container__fly-in-text, .container__random-article, .container__or, .container__search-article, .container__input").removeClass("hidden");
     function getData () {
-        var input = document.getElementsByClassName("container__input-text")[0].value; //Gets user input as a query.
+        var input = document.getElementsByClassName("container__input-text")[0].value;
         console.log("User has entred:", input);
         
         if (input == "") {
-          alert("Query is empty. Please enter any record."); //Alert if user didn't specify any record.
+          alert("Query is empty. Please enter any record.");
         }
         
         else {
-            $(".container").addClass("container__move-up"); //Move content to top of the page. --> to make a space for vikiedia content.
-            var website = "https://en.wikipedia.org"; //Wikipedia main page.
-            var query = "/w/api.php?action=query&format=json&origin=*&prop=extracts%7Cinfo&generator=search&exsentences=1&exintro=1&explaintext=1&exsectionformat=plain&inprop=url&gsrsearch=" + input + "&gsrlimit=10"; //A full query. Could be changed with the API sandbox: https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=jsonfm
-            var fullApi = website + query; //Full JSON path.
+            $(".container").addClass("container__move-up");
+            var website = "https://en.wikipedia.org";
+            var query = "/w/api.php?action=query&format=json&origin=*&prop=extracts%7Cinfo&generator=search&exsentences=1&exintro=1&explaintext=1&exsectionformat=plain&inprop=url&gsrsearch=" + input + "&gsrlimit=10";
+            var fullApi = website + query;
             console.log("JSON:" , fullApi);
             
             //Working with JSON
@@ -24,18 +24,17 @@ $(document).ready(function () {
                 }
                 else {
                     for (var i = 0; i < Object.keys(json.query.pages).length; i++) {
-                        var pageId = Object.keys(json.query.pages)[i]; //Changing atrticles to work on it.
+                        var pageId = Object.keys(json.query.pages)[i];
                         var title = json.query.pages[pageId].title;
                         var extract = json.query.pages[pageId].extract;
                         var pageUrl = json.query.pages[pageId].fullurl;
-                        //console.log(title, extract, pageUrl); Shows data in console.
-                        newContent += '<a class="animated fadeIn" href="' + pageUrl + '" target="_blank">'; //Adds anchor to article page.
-                        newContent += '<div class="container__new-article">'; //Adds cool article design.
-                        newContent += '<h1>' + title + '</h1>'; //Adds article header.
-                        newContent += '<p>' + extract + '</p>'; //Adds article extract.
-                        newContent += '</div></a>' //Closing tags.
-                        document.getElementById('container__articles').innerHTML = newContent; //Loads new content to page.
-                        var modifier = 0; //Allow to execute  $(".container__input-text").change(getData).
+                        newContent += '<a class="animated fadeIn" href="' + pageUrl + '" target="_blank">';
+                        newContent += '<div class="container__new-article">';
+                        newContent += '<h1>' + title + '</h1>';
+                        newContent += '<p>' + extract + '</p>';
+                        newContent += '</div></a>';
+                        document.getElementById('container__articles').innerHTML = newContent;
+                        var modifier = 0;
                     }
                 }
             });
