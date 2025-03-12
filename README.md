@@ -7,4 +7,4 @@ User Story: You can search Wikipedia entries in a search box and see the resulti
 User Story: You can click a button to see a random Wikipedia entry. <br />
 # LIVE
 
-https://fjollsfinn.github.io/Wikipedia_Viewer/index.html
+https://findiel.github.io/Wikipedia_Viewer/index.html
